@@ -7,14 +7,14 @@ class SigninSignup extends Component{
     render(){
         return(
             <div className = 'container'>
-                <div className = 'row'>
-                    <div className = 'col-xs-12'>
-                        <div className = 'col-xs-9'>
-                            <Welcome />
-                        </div>
-                        <div className = 'col-xs-3'>
-                            <SignIn/> 
-                            <SignUp /> 
+                <div className = 'row welcome-page'>
+                    <div className = 'col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                        <Welcome />
+                        <div className = 'col-xs-12 col-sm-4 col-md-4 col-lg-4'>
+                            <div className='login-page'>
+                                <SignIn/> 
+                                <SignUp /> 
+                            </div>
                         </div>
                     </div>
                 </div>

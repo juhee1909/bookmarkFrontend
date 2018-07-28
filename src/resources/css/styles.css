@@ -1,0 +1,12 @@
+.welcome-page{
+    background-color: lightgrey;
+    height : 100%;
+    width : 100%;
+    min-height : 600px;
+}
+
+.login-page{
+    background-color: white;
+    height: 500px;
+    margin-top: 20px
+}

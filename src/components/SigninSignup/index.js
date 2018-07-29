@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {browserHistory} from 'react-router';
 import Welcome from './Welcome';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import { isAuthorized, clearMessage } from '../../redux/actions/auth';
+
 
 class SigninSignup extends Component{
+    constructor(){
+        super();
+        this.state = {
+
+        }
+    }
+
+    componentDidMount = () =>{
+        const {dispatch} = this.props;
+        dispatch( isAuthorized( this.props.location.query.next ) );
+    }
     render(){
         return(
             <div className = 'container'>
@@ -23,4 +38,7 @@ class SigninSignup extends Component{
     }
 }
 
-export default SigninSignup;
+const mapStateToProps = (state) =>{
+   return state;
+}
+export default connect(mapStateToProps)(SigninSignup);
